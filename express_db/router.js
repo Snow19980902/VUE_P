@@ -11,6 +11,7 @@ const router = express.Router()
 // 获取轮播图
 router.get('/lunbotu', (req, res, next) => {
   Project.find({ name: "lunbotu" }).then(function (data) {
+    console.log(data)
     return res.send(data)
   })
 })
